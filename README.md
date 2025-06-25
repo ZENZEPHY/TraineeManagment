@@ -1,8 +1,8 @@
-# 🧑‍💼 Trainee Management System (.NET MVC)
+#Trainee Management System (.NET MVC)
 
 A simple ASP.NET MVC web application to manage trainee records with full **CRUD** (Create, Read, Update, Delete) operations.
 
-## ✨ Features
+##  Features
 
 - ➕ Add new trainees
 - 📋 View all trainee details
@@ -11,7 +11,7 @@ A simple ASP.NET MVC web application to manage trainee records with full **CRUD*
 - 🗃️ Database-backed using Entity Framework
 - 📐 Clean MVC architecture
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - ASP.NET MVC (C#)
 - Entity Framework
@@ -19,7 +19,7 @@ A simple ASP.NET MVC web application to manage trainee records with full **CRUD*
 - Razor Views
 - Bootstrap (for basic UI styling)
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
