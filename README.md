@@ -25,7 +25,8 @@ A simple ASP.NET MVC web application to manage trainee records with full **CRUD*
 
 - [.NET SDK](https://dotnet.microsoft.com/download)
 - [Visual Studio](https://visualstudio.microsoft.com/) with ASP.NET and web development workload
-- SQL Server or LocalDB
+- [SSMS](https://learn.microsoft.com/en-us/ssms/install/install)
+
 
 ### Setup Instructions
 
