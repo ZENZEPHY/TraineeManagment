@@ -6,21 +6,65 @@ namespace TraineeManagmentApplication.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
+   
+    tochContext context = new tochContext();
     public IActionResult Index()
     {
-        return View();
+        return View(context.Contacts.ToList());
     }
 
-    public IActionResult Privacy()
+
+    public IActionResult Create()
     {
         return View();
+    }
+    public IActionResult Create(Contact con)
+    {
+        if (ModelState.IsValid)
+        {
+            context.Contacts.Add(con);
+            context.SaveChanges();
+            return RedirectToAction("index");
+        }
+        return RedirectToAction("index");
+    }
+
+
+    public IActionResult Details(int id)
+    {
+        var man = context.Contacts.Find(id);
+        return View(man);
+    }
+
+    public IActionResult Delete(int id)
+    {
+        var man = context.Contacts.Find(id);
+        return View(man);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public IActionResult DeleteConfirmed(Contact contact)
+    { 
+        if (contact != null)
+        {
+            context.Contacts.Remove(contact);
+            context.SaveChanges();
+        }
+        return RedirectToAction("index");
+    }
+
+    public IActionResult Edit(int id)
+    {
+        return View(context.Contacts.Find(id));
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Contact contact)
+    {
+ 
+            context.Contacts.Update(contact);
+            context.SaveChanges();
+            return RedirectToAction("index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
